@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiAppDesign", "MauiAppDesign.csproj", "{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "..\WebServices\WebServices.csproj", "{C47BBDE8-B23D-4E4F-BE32-91332F7190E7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Model.Shared", "..\Model.Shared\Model.Shared.shproj", "{8E20ECF0-C30E-4D18-A991-F06859FBEC32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99FF7D8-361E-47D7-891F-9D8BE556E6F5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C47BBDE8-B23D-4E4F-BE32-91332F7190E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47BBDE8-B23D-4E4F-BE32-91332F7190E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47BBDE8-B23D-4E4F-BE32-91332F7190E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47BBDE8-B23D-4E4F-BE32-91332F7190E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {228CB5AF-AEF8-481A-8FBA-CAF522030735}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Model.Shared\Model.Shared.projitems*{8e20ecf0-c30e-4d18-a991-f06859fbec32}*SharedItemsImports = 13
+		..\Model.Shared\Model.Shared.projitems*{c47bbde8-b23d-4e4f-be32-91332f7190e7}*SharedItemsImports = 5
+		..\Model.Shared\Model.Shared.projitems*{c99ff7d8-361e-47d7-891f-9d8be556e6f5}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

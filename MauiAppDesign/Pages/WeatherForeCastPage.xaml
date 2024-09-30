@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Model.Shared"
+             x:Class="MauiAppDesign.Pages.WeatherForeCastPage"
+             Title="WeatherForeCastPage">
+    
+    
+    
+    <Grid RowDefinitions="100,*">
+        <Grid x:Name="MainContentGrid"
+              Grid.Row="0"
+              Padding="24,0,24,0"
+              BackgroundColor="{StaticResource PageBackgroundColor}"
+              ColumnDefinitions="*,Auto"
+              IgnoreSafeArea="{OnPlatform Android=False,
+                                            iOS=True}"
+              RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Spacing="4"
+                VerticalOptions="Center">
+
+                <Label Style="{StaticResource PageHeaderStyle}" Text="Let's Explore"/>
+                <Label Style="{StaticResource PageHeaderSubtitleStyle}" Text="The Weather Forecast" />
+
+            </VerticalStackLayout>
+
+        </Grid>
+        
+        <Grid Grid.Row="1" Margin="5,0,5,0">
+        <RefreshView
+        x:Name="refreshView"
+        Command="{Binding RefreshCommand}"
+        IsRefreshing="{Binding IsRefreshing}">
+            <VerticalStackLayout>
+
+
+                <CollectionView
+            x:Name="IstWeather"
+            HeightRequest="160"
+            SelectionMode="Single">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="16" Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:WeatherForecast">
+                            <Border
+                                Padding="16"
+                                Background="White"
+                                StrokeThickness="0"
+                                VerticalOptions="Fill"
+                                WidthRequest="140">
+
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="16" />
+
+                                </Border.StrokeShape>
+
+                                <Grid RowDefinitions="*,Auto,Auto,Auto" RowSpacing="4" >
+                                    <Label
+                                        Grid.Row="0"
+                                        FontSize="Medium"
+                                        HorizontalOptions="Fill"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Summary}"
+                                        VerticalOptions="Fill" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Margin="0,4,0,4"
+                                        Text="{Binding TemperatureC}" />
+                                    <Label
+                                        Grid.Row="2"
+                                        Margin="0,4,0,4"
+                                        Text="{Binding TemperatureF}" />
+                                    <Label
+                                        Grid.Row="3"
+                                        Margin="0,4,0,0"
+                                        Text="{Binding Date}" />
+
+
+                                </Grid>
+
+                            </Border>
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+
+                </CollectionView>
+            </VerticalStackLayout>
+        </RefreshView>
+    </Grid>
+        
+        
+   </Grid>
+</ContentPage>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppDesign.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HomePage">
+
+
+    <Grid>
+        <Border
+            x:Name="BottomBorder"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="20,0,20,20"
+            Padding="16,0"
+            BackgroundColor="#393965"
+            HeightRequest="90"
+            HorizontalOptions="Fill"
+            Stroke="{StaticResource BorderColor}"
+            VerticalOptions="End">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="45" />
+            </Border.StrokeShape>
+
+            <!--  RowDefinitions= Auto,Auto  -->
+
+            <Grid
+                ColumnDefinitions="*,*,*"
+                HorizontalOptions="Fill"
+                RowSpacing="6"
+                VerticalOptions="Center">
+
+                <!--  Profile  -->
+
+
+                <StackLayout Grid.Column="2">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_2" />
+                    </StackLayout.GestureRecognizers>
+                    <Image x:Name="imgpfp"
+                        HeightRequest="30"
+                        HorizontalOptions="Center"
+                        Source="imgprofile.png"
+                        WidthRequest="30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}"
+                        Text="Profile" />
+
+
+                </StackLayout>
+
+                <!--  Favorite  -->
+
+
+                <StackLayout Grid.Column="1">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1" />
+                    </StackLayout.GestureRecognizers>
+                    <Image
+                        x:Name="imgheart"
+                        HeightRequest="30"
+                        HorizontalOptions="Center"
+                        Source="imgfavorite.png"
+                        WidthRequest="30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}"
+                        Text="Favorite" />
+
+
+                </StackLayout>
+
+                <!--  Explorer  -->
+
+
+                <StackLayout Grid.Column="0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                    <Image
+                        x:Name="imgweather"
+                        HeightRequest="30"
+                        HorizontalOptions="Center"
+                        Source="imgexplore.png"
+                        WidthRequest="30" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}"
+                        Text="WeatherForeCast" />
+
+
+                </StackLayout>
+            </Grid>
+
+
+
+
+        </Border>
+    </Grid>
+</ContentPage>
